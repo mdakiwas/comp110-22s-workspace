@@ -2,19 +2,24 @@
 
 __author__ = "730474304"
 
+"""User input for 5 letter word."""
 five_char_word: str = input("Enter a 5-character word: ")
 if len(five_char_word) != 5:
+    """If invalid input, quiting program."""
     print("Error: Word must contain 5 characters")
     exit()
 
+"""User input for 1 character."""
 single_char: str = input("Enter a single character: ")
 if len(single_char) != 1:
+    """If invalid input, quiting program."""
     print("Error: Character must be a single character")
     exit()
 
 print("Searching for " + single_char + " in " + five_char_word)
 
 char_match: int = 0
+"""Check five indices of word."""
 if five_char_word[0] == single_char:
     print(single_char + " found at index 0")
     char_match = char_match + 1
