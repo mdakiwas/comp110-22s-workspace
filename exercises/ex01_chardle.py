@@ -35,6 +35,11 @@ if five_char_word[3] == single_char:
 if five_char_word[4] == single_char:
     print(single_char + " found at index 4")
     char_match = char_match + 1
-print(str(char_match) + " instance of " + single_char + " found in " + five_char_word)
+
+if char_match >= 2:
+    print(str(char_match) + " instances of " + single_char + " found in " + five_char_word)
+else:
+    print(str(char_match) + " instance of " + single_char + " found in " + five_char_word)
+
 if char_match == 0:
     print("No instances of " + single_char + " found in " + five_char_word)
