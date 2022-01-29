@@ -6,10 +6,10 @@ WHITE_BOX: str = "\U00002B1C"
 GREEN_BOX: str = "\U0001F7E9"
 YELLOW_BOX: str = "\U0001F7E8"
 secret: str = "python"
-guess = input(f"What is your {len(secret)}-letter guess? ")  # asking user input for a word guess
+guess: str = input(f"What is your {len(secret)}-letter guess? ")  # asking user input for a word guess
 
 while len(guess) != len(secret): 
-    guess: str = input(f"That was not {len(secret)} letters! Try again: ")  # re-asking user input if length is wrong
+    guess = input(f"That was not {len(secret)} letters! Try again: ")  # re-asking user input if length is wrong
 
 i: int = 0
 result: str = "" 
