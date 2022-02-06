@@ -1,4 +1,4 @@
-"""This is it, the actual wordle ;-;"""
+"""This is it, the actual wordle ;-;!"""
 
 __author__ = "730474304"
 
@@ -42,6 +42,7 @@ def emojified(guess: str, secret: str) -> str:
 
 
 def input_guess(expect_len: int) -> str:
+    """Asking for user to guess the secret word."""
     guess: str = input(f"Enter a {expect_len} character word: ")
     while len(guess) != expect_len:
         guess = input(f"That wasn't {expect_len} chars! Try again: ")
