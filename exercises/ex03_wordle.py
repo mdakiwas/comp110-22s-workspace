@@ -4,7 +4,7 @@ __author__ = "730474304"
 
 
 def contains_char(word: str, character: str) -> bool:
-    """Returns True when character exists in the word"""
+    """Returns True when character exists in the word."""
     assert len(character) == 1
     exist: bool = False
     i: int = 0
@@ -25,7 +25,7 @@ YELLOW_BOX: str = "\U0001F7E8"
 
 
 def emojified(guess: str, secret: str) -> str:
-    """Gives emoji depending whether the guess' letters are in the secret word"""
+    """Gives emoji depending whether the guess' letters are in the secret word."""
     assert len(guess) == len(secret)
     i: int = 0
     result: str = ""
