@@ -1,4 +1,4 @@
-"This is my third attempt of making turtle art. Please spare me."
+"""This is my third attempt of making turtle art. Please spare me."""
 
 __author__ = "730474304"
 
@@ -7,7 +7,7 @@ colormode(255)
 
 
 def main() -> None:  # Makes a abstract sort of turtle art with mountains and planets orbiting a moon.
-    "The entrypoint of my scene."
+    """The entrypoint of my scene."""
     tracer(0, 0)  # Disable delay in tracing
 
     bg_turtle: Turtle = Turtle()
@@ -24,7 +24,8 @@ def main() -> None:  # Makes a abstract sort of turtle art with mountains and pl
     done()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 
 
-def background(bg_turtle: Turtle, x: int, y: int, box_len: int) -> None:  # Makes a solid background.
+def background(bg_turtle: Turtle, x: int, y: int, box_len: int) -> None:  
+    """Makes a solid background."""
     x_coor: int = x
     y_coor: int = y
     length: int = box_len
@@ -44,7 +45,8 @@ def background(bg_turtle: Turtle, x: int, y: int, box_len: int) -> None:  # Make
     bg_turtle.hideturtle()
 
 
-def mountain(lump: Turtle, x: int, y: int, length: int) -> None:  # Makes a triangular structure that's intended to be mountains.
+def mountain(lump: Turtle, x: int, y: int, length: int) -> None:  
+    """Makes a triangular structure that's intended to be mountains."""
     x_coor: int = x
     y_coor: int = y
     side_len: int = length
@@ -54,7 +56,7 @@ def mountain(lump: Turtle, x: int, y: int, length: int) -> None:  # Makes a tria
 
     lump_i = 0
     while lump_i < 2:
-        pen_fill = [(230, 201, 245), (174, 132, 196), (123, 77, 148), (62, 24, 82), (0, 0, 0)]
+        pen_fill: list = [(230, 201, 245), (174, 132, 196), (123, 77, 148), (62, 24, 82), (0, 0, 0)]
         color = 0
         while color < 5:
             lump.pencolor(pen_fill[color])
@@ -78,7 +80,8 @@ def mountain(lump: Turtle, x: int, y: int, length: int) -> None:  # Makes a tria
     lump.hideturtle()
 
 
-def moon(big_circle: Turtle, x: int, y: int) -> None:  # Makes a large circle that's meant to be a moon.
+def moon(big_circle: Turtle, x: int, y: int) -> None:  
+    """Makes a large circle that's meant to be a moon."""
     x_coor: int = x
     y_coor: int = y
 
@@ -93,7 +96,8 @@ def moon(big_circle: Turtle, x: int, y: int) -> None:  # Makes a large circle th
     big_circle.hideturtle()
 
 
-def planet(small_circle: Turtle, x: int, y: int) -> None:  # Makes multiple small circles meant to be planets
+def planet(small_circle: Turtle, x: int, y: int) -> None:  
+    """Makes multiple small circles meant to be planets."""
     x_coor: int = x
     y_coor: int = y
     
