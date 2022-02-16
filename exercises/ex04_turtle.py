@@ -56,7 +56,7 @@ def mountain(lump: Turtle, x: int, y: int, length: int) -> None:
 
     lump_i = 0
     while lump_i < 2:
-        pen_fill: list = [(230, 201, 245), (174, 132, 196), (123, 77, 148), (62, 24, 82), (0, 0, 0)]
+        pen_fill = [(230, 201, 245), (174, 132, 196), (123, 77, 148), (62, 24, 82), (0, 0, 0)]
         color = 0
         while color < 5:
             lump.pencolor(pen_fill[color])
@@ -105,7 +105,7 @@ def planet(small_circle: Turtle, x: int, y: int) -> None:
     small_circle.goto(x_coor, y_coor)
     small_circle.pendown()
 
-    pen_fill: list = [(125, 175, 255), (78, 130, 212), (18, 20, 84), (84, 18, 40), (219, 0, 73)]
+    pen_fill = [(125, 175, 255), (78, 130, 212), (18, 20, 84), (84, 18, 40), (219, 0, 73)]
     
     i = 0
     while i < 5:
