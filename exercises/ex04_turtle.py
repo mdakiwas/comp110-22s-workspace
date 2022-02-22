@@ -58,7 +58,8 @@ def mountain(lump: Turtle, x: int, y: int, length: int) -> None:
     while lump_i < 2:
         pen_fill = [(230, 201, 245), (174, 132, 196), (123, 77, 148), (62, 24, 82), (0, 0, 0)]
         color = 0
-        while color < 5:
+        shift = False
+        while color < 5 and shift is False:
             lump.pencolor(pen_fill[color])
             lump.fillcolor(pen_fill[color])
             lump.begin_fill()
@@ -70,6 +71,7 @@ def mountain(lump: Turtle, x: int, y: int, length: int) -> None:
             lump.goto(x_coor, y_coor)
             side_len = side_len - 50
             lump.end_fill()
+            shift is True
             color += 1
         lump.penup()
         x_coor = x_coor + 450
@@ -108,7 +110,8 @@ def planet(small_circle: Turtle, x: int, y: int) -> None:
     pen_fill = [(125, 175, 255), (78, 130, 212), (18, 20, 84), (84, 18, 40), (219, 0, 73)]
     
     i = 0
-    while i < 5:
+    shift = False
+    while i < 5 and shift is False:
         small_circle.pencolor(pen_fill[i])
         small_circle.fillcolor(pen_fill[i])
         small_circle.begin_fill()
@@ -119,6 +122,7 @@ def planet(small_circle: Turtle, x: int, y: int) -> None:
         small_circle.penup()
         small_circle.goto(x_coor, y_coor)
         small_circle.pendown()
+        shift is True
         i += 1
     small_circle.hideturtle()
 
