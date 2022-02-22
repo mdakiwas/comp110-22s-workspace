@@ -4,6 +4,7 @@ __author__ = "730474304"
 
 
 def only_evens(num_list: list[int]) -> list[int]:
+    """Returns only even numbers."""
     evens: list[int] = []
     for num in num_list:
         if num % 2 == 0:
@@ -12,6 +13,7 @@ def only_evens(num_list: list[int]) -> list[int]:
 
 
 def sub(num_list: list[int], start_i: int, end_i: int) -> list[int]:
+    """Returns numbers list between two inputted numbers."""
     subset: list[int] = []
     start: int = 0
     end: int = len(num_list)
@@ -29,6 +31,7 @@ def sub(num_list: list[int], start_i: int, end_i: int) -> list[int]:
 
 
 def concat(list_one: list[int], list_two: list[int]) -> list[int]:
+    """Returns concattenated list from two seperate lists."""
     new_list: list[int] = []
     new_list = list_one + list_two
     return new_list
