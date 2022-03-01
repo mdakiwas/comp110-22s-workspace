@@ -14,7 +14,7 @@ def invert(dictionary: dict[str, str]) -> dict[str, str]:
     return inverted_dict
 
 
-def favorite_colors(name_color: dict[str, str]) -> str:
+def favorite_color(name_color: dict[str, str]) -> str:
     """Returns the most favorite color/value."""
     colors = list(name_color.values())
     most_fav_color = max(colors, key=colors.count)

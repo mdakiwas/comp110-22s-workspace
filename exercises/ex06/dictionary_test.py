@@ -2,7 +2,7 @@
 
 __author__ = "730474304"
 
-from dictionary import invert, favorite_colors, count
+from dictionary import invert, favorite_color, count
 import pytest
 
 
@@ -25,18 +25,19 @@ with pytest.raises(KeyError):
 def test_favorite_color_short() -> None:
     """Asserting most favorite color from 3 keys."""
     name_color = {"Marc": "yellow", "Ezri": "blue", "Kris": "blue"}
-    assert favorite_colors(name_color) == "blue"
+    assert favorite_color(name_color) == "blue"
 
 
 def test_favorite_color_long() -> None:
+    """Testing whether the function would work with a longer dictionary."""
     name_color = {"Marc": "yellow", "Ezri": "blue", "Kris": "blue", "Marley": "purple", "MJ": "red", "John": "blue"}
-    assert favorite_colors(name_color) == "blue"
+    assert favorite_color(name_color) == "blue"
 
 
 def test_favorite_color_tie() -> None:
     """Testing whether the first mentioned favorite color would return in the case of a tie."""
     name_color = {"Marc": "yellow", "Ezri": "blue", "Kris": "blue", "Marley": "purple", "MJ": "red", "John": "red"}
-    assert favorite_colors(name_color) == "blue"
+    assert favorite_color(name_color) == "blue"
 
 
 def test_count_short() -> None:
