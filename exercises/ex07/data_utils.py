@@ -62,6 +62,7 @@ def head(table: dict[str, list[str]], n: int) -> dict[str, list[str]]:
 
 
 def select(table: dict[str, list[str]], col_name: list[str]) -> dict[str, list[str]]:
+    """Makes new table with only specific subset from original columns."""
     result: dict[str, list[str]] = {}
     for column in col_name:
         result[column] = table[column]
@@ -69,6 +70,7 @@ def select(table: dict[str, list[str]], col_name: list[str]) -> dict[str, list[s
 
 
 def concat(table_1: dict[str, list[str]], table_2: dict[str, list[str]]) -> dict[str, list[str]]:
+    """Makes new table by combining two tables."""
     result: dict[str, list[str]] = {}
     for column in table_1:
         result[column] = table_1[column]
@@ -84,6 +86,7 @@ def concat(table_1: dict[str, list[str]], table_2: dict[str, list[str]]) -> dict
 
 
 def count(values: list[str]) -> dict[str, int]:
+    """Counts the input values frequency."""
     result: dict[str, int] = {}
     for v in values:
         if v in result:
