@@ -8,6 +8,7 @@ __author__ = "730474304"
 
 
 class Simpy:
+    """Working with sequences of numerical data as you would expect to see in a column of a data table."""
     values: list[float]
 
     def __init__(self, initialize: list[float]) -> None:
